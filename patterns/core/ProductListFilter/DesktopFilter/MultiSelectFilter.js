@@ -14,7 +14,7 @@ export default function MultiSelectFilter(props) {
   } = props
 
   const { t } = useTranslation()
-  //const FILTER_MENU_HEIGHT = 192
+  const FILTER_MENU_HEIGHT = 192
   const FILTER_MENU_SHOWED_ITEMS = 6
   const innerRef = useRef(null)
   const wrapperRef = useRef(null)

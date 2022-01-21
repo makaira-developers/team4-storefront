@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { Icon, Button } from '../../..'
+import { Icon, Button, SizeFinder } from '../../..'
 import { useState, useRef } from 'react'
 import { useTranslation } from '../../../../utils'
 
@@ -10,10 +10,11 @@ export default function MultiSelectFilter(props) {
     selectedValues,
     submitForms,
     className,
+    withSizeFinder = false,
   } = props
 
   const { t } = useTranslation()
-  const FILTER_MENU_HEIGHT = 192
+  //const FILTER_MENU_HEIGHT = 192
   const FILTER_MENU_SHOWED_ITEMS = 6
   const innerRef = useRef(null)
   const wrapperRef = useRef(null)
@@ -50,7 +51,7 @@ export default function MultiSelectFilter(props) {
   return (
     <>
       <div
-        style={{ maxHeight: height }}
+        //style={{ maxHeight: height }}
         ref={wrapperRef}
         className={wrapperClasses}
       >
@@ -93,6 +94,7 @@ export default function MultiSelectFilter(props) {
             )
           })}
         </ul>
+        {withSizeFinder && <SizeFinder withinList={true} />}
       </div>
       <Button variant="tertiary" className={buttonClasses} onClick={toggleOpen}>
         {toggleText}

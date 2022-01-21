@@ -38,3 +38,4 @@ export { default as BrowserHintPage } from './core/BrowserHintPage'
 export { default as ContactForm } from './core/ContactForm'
 
 /* Add project specific patterns here */
+export { default as SizeFinder } from './SizeFinder'

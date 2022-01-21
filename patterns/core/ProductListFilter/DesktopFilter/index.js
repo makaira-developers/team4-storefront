@@ -47,6 +47,7 @@ export default function DesktopFilter(props) {
               id={id}
               key={max ? `${id}-${min}-${max}` : id}
               submitForms={submitForms}
+              withSizeFinder={'mak_bh_size' === id}
             />
           </div>
         )

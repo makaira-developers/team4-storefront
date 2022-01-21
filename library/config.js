@@ -41,6 +41,7 @@ import SmartBundle from './examplePages/SmartBundle'
 import ErrorPage from '../patterns/core/ErrorPage'
 
 /* Add project specific imports here */
+import SizeFinder, { sizeFinderVariants } from '../patterns/SizeFinder'
 /* CLI MARKER - PATTER IMPORT - DO NOT REMOVE */
 
 export default [
@@ -163,6 +164,12 @@ export default [
     name: 'Contact Form',
     component: ContactForm,
     variants: contactFormVariants,
+  },
+  {
+    type: 'placeable',
+    name: 'Size Finder',
+    component: SizeFinder,
+    variants: sizeFinderVariants,
   },
   /* CLI MARKER - PATTERN CONFIG - DO NOT REMOVE */
   {

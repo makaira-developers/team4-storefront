@@ -92,6 +92,15 @@ app
       }
     })
 
+    // API call to get calculated SUS BH size
+    server.post('/api/calculate-size', (req, res) => {
+      return res.json({
+        status: 'success',
+        ubu: 70,
+        bu: 85,
+      })
+    })
+
     server.get(/^(.*)$/, (req, res) => {
       app.render(req, res, '/frontend/entry', {
         seoUrl: req.params[0],
